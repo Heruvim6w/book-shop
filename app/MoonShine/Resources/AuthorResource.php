@@ -43,9 +43,9 @@ class AuthorResource extends ModelResource
         return [
             Box::make([
                 ID::make(),
-                Text::make('Name')->sortable(),
-                Text::make('Surname')->sortable(),
-                Text::make('Biography')->sortable(),
+                Text::make('Name'),
+                Text::make('Surname'),
+                Text::make('Biography')->nullable(),
             ])
         ];
     }
@@ -57,7 +57,15 @@ class AuthorResource extends ModelResource
     {
         return [
             ID::make(),
+            Text::make('Name'),
+            Text::make('Surname'),
+            Text::make('Biography'),
         ];
+    }
+
+    protected function search(): array
+    {
+        return ['surname', 'biography'];
     }
 
     /**
