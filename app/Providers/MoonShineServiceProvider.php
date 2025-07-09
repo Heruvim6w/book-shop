@@ -13,6 +13,9 @@ use App\MoonShine\Resources\MoonShineUserResource;
 use App\MoonShine\Resources\MoonShineUserRoleResource;
 use App\MoonShine\Resources\AuthorResource;
 use App\MoonShine\Resources\BookResource;
+use App\MoonShine\Resources\GenreResource;
+use App\MoonShine\Resources\OrderResource;
+use App\MoonShine\Resources\UserResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -29,6 +32,9 @@ class MoonShineServiceProvider extends ServiceProvider
                 MoonShineUserRoleResource::class,
                 AuthorResource::class,
                 BookResource::class,
+                GenreResource::class,
+                OrderResource::class,
+                UserResource::class,
             ])
             ->pages([
                 ...$config->getPages(),

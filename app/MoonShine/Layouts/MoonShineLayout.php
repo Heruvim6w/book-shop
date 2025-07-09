@@ -33,6 +33,9 @@ use MoonShine\UI\Components\{Breadcrumbs,
 use App\MoonShine\Resources\AuthorResource;
 use MoonShine\MenuManager\MenuItem;
 use App\MoonShine\Resources\BookResource;
+use App\MoonShine\Resources\GenreResource;
+use App\MoonShine\Resources\OrderResource;
+use App\MoonShine\Resources\UserResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -49,6 +52,9 @@ final class MoonShineLayout extends AppLayout
             ...parent::menu(),
             MenuItem::make('Authors', AuthorResource::class),
             MenuItem::make('Books', BookResource::class),
+            MenuItem::make('Genres', GenreResource::class),
+            MenuItem::make('Orders', OrderResource::class),
+            MenuItem::make('Users', UserResource::class),
         ];
     }
 

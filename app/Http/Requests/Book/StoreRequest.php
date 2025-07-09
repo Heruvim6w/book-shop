@@ -23,7 +23,7 @@ class StoreRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string', 'min:3', 'max:255'],
-            'cover' => ['nullable', 'image', 'mimes:jpeg,jpg,png', 'max:2048'],
+            'cover' => ['nullable', 'image', 'mimes:jpeg,jpg,png', 'max:20048'],
             'description' => ['nullable', 'string', 'min:3', 'max:255'],
             'publication_year' => ['required', 'date_format:Y'],
             'genre_id' => ['required', 'numeric'],//, 'exists:genres,id'],
