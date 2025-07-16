@@ -34,7 +34,7 @@ class BookController extends Controller
 
         $book = new Book();
         $book->fill($data);
-dd($book);
+
         return $book->save();
     }
 
