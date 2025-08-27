@@ -12,6 +12,7 @@ use MoonShine\UI\Components\Layout\Box;
 use MoonShine\UI\Fields\ID;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
+use MoonShine\UI\Fields\Image;
 use MoonShine\UI\Fields\Text;
 
 /**
@@ -46,6 +47,10 @@ class AuthorResource extends ModelResource
                 Text::make('Name'),
                 Text::make('Surname'),
                 Text::make('Biography')->nullable(),
+                Image::make('Photo')
+                    ->dir('authors_photos')
+                    ->allowedExtensions(['jpg', 'jpeg', 'png', 'webp'])
+                    ->removable(),
             ])
         ];
     }
@@ -60,6 +65,7 @@ class AuthorResource extends ModelResource
             Text::make('Name'),
             Text::make('Surname'),
             Text::make('Biography'),
+            Image::make('Photo'),
         ];
     }
 
