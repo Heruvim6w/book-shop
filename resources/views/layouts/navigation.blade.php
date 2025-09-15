@@ -13,49 +13,24 @@
                 <div class="col-lg-8 d-none d-lg-block">
                     <nav class="mainmenu__nav">
                         <ul class="meninmenu d-flex justify-content-start">
-                            <li class="drop with--one--item"><a href="{{ route('index') }}">Home</a>
-                                <div class="megamenu dropdown">
-                                    <ul class="item item01">
-                                        <li><a href="index.html">Home Style Default</a></li>
-                                    </ul>
-                                </div>
+                            <li class="drop with--one--item">
+                                <a href="{{ route('index') }}">Home</a>
                             </li>
-                            <li class="drop"><a href="#">Shop</a>
+                            <li class="drop">
+                                <a href="{{ route('books.index') }}">Shop</a>
                                 <div class="megamenu mega03">
                                     <ul class="item item03">
-                                        <li class="title">Shop Layout</li>
+                                        @foreach($genres as $key => $value)
+                                            <a href="{{ route('genres.show', $key) }}">
+                                                <li class="title">{{ $value }}</li>
+                                            </a>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </li>
-                            <li class="drop"><a href="shop-grid.html">Books</a>
-                                <div class="megamenu mega03">
-                                    <ul class="item item03">
-                                        <li class="title">Categories</li>
-                                    </ul>
-                                </div>
+                            <li>
+                                <a href="{{ route('contacts.show') }}">Contact</a>
                             </li>
-                            <li class="drop"><a href="shop-grid.html">Kids</a>
-                                <div class="megamenu mega02">
-                                    <ul class="item item02">
-                                        <li class="title">Top Collections</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="drop"><a href="#">Pages</a>
-                                <div class="megamenu dropdown">
-                                    <ul class="item item01">
-                                        <li><a href="about.html">About Page</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="drop"><a href="blog.html">Blog</a>
-                                <div class="megamenu dropdown">
-                                    <ul class="item item01">
-                                        <li><a href="blog.html">Blog Page</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>

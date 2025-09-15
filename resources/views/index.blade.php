@@ -17,7 +17,7 @@
                     <div class="product product__style--3">
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="product__thumb">
-                                <a class="first__img" href="single-product.html">
+                                <a class="first__img" href="{{ route('books.show', $book->id) }}">
                                     @if($book->cover)
                                         <img src="{{ asset('storage/' . $book->cover) }}" alt="product image">
                                     @else

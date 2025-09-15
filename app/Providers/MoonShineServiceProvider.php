@@ -16,6 +16,7 @@ use App\MoonShine\Resources\BookResource;
 use App\MoonShine\Resources\GenreResource;
 use App\MoonShine\Resources\OrderResource;
 use App\MoonShine\Resources\UserResource;
+use App\MoonShine\Resources\ContactResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -35,6 +36,7 @@ class MoonShineServiceProvider extends ServiceProvider
                 GenreResource::class,
                 OrderResource::class,
                 UserResource::class,
+                ContactResource::class,
             ])
             ->pages([
                 ...$config->getPages(),

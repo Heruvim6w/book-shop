@@ -38,6 +38,6 @@ class Book extends Model
 
     public function scopeExistBooks(Builder $query): void
     {
-        $query->where('count', '>', 0)->get();
+        $query->where('count', '>', 0);
     }
 }

@@ -36,6 +36,7 @@ use App\MoonShine\Resources\BookResource;
 use App\MoonShine\Resources\GenreResource;
 use App\MoonShine\Resources\OrderResource;
 use App\MoonShine\Resources\UserResource;
+use App\MoonShine\Resources\ContactResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -55,6 +56,7 @@ final class MoonShineLayout extends AppLayout
             MenuItem::make('Genres', GenreResource::class),
             MenuItem::make('Orders', OrderResource::class),
             MenuItem::make('Users', UserResource::class),
+            MenuItem::make('Contacts', ContactResource::class),
         ];
     }
 
