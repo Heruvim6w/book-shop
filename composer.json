@@ -11,7 +11,8 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "moonshine/ckeditor": "^3.0",
-        "moonshine/moonshine": "^3.14"
+        "moonshine/moonshine": "^3.14",
+        "ext-http": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
