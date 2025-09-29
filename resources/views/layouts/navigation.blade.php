@@ -38,7 +38,7 @@
                     <ul class="header__sidebar__right d-flex justify-content-end align-items-center">
                         <li class="shopcart">
                             <a class="cartbox_active" href="#">
-                                <span class="product_qun">{{ $cart->count ?? '' }}</span>
+                                <span class="product_qun">{{ $cart->books_count ?? '' }}</span>
                             </a>
                             <!-- Start Shopping Cart -->
                             <div class="block-minicart minicart__active">
@@ -46,13 +46,13 @@
                                     <div class="micart__close">
                                         <span>close</span>
                                     </div>
-                                    @if(!$cart || $cart->count <= 0)
+                                    @if(!isset($cart) || $cart->books_count <= 0)
                                         <div class="content">
                                             <h6>Your cart is empty!</h6>
                                         </div>
                                     @else
                                         <div class="items-total d-flex justify-content-between">
-                                            <span>{{ $cart->count }} items</span>
+                                            <span>{{ $cart->books_count }} items</span>
                                             <span>Cart Subtotal</span>
                                         </div>
                                         <div class="total_amount text-right">

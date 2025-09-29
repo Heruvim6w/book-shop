@@ -24,13 +24,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         View::share(
-            'cart',
-            Cart::query()
-                ->where('user_id', Auth::id())
-                ->first()
-        );
-
-        View::share(
             'genres',
             Genre::all()
 //                ->map(fn ($genre) => ['id' => $genre->id, 'name' => $genre->name])

@@ -32,7 +32,7 @@ class CartController extends Controller
            $cart->save();
        }
 
-        return $cart;
+        return redirect()->back();
     }
 
     /**
@@ -69,7 +69,7 @@ class CartController extends Controller
 
         $cart->save();
 
-        return $cart;
+        return redirect()->back();
     }
 
     /**
@@ -79,17 +79,6 @@ class CartController extends Controller
     {
         //
     }
-
-//    private function calculateTotalCost(int $book_id, int $quantity): float|RuntimeException|int
-//    {
-//        $book = Book::query()->findOrFail($book_id);
-//
-//        if (!$book) {
-//            return new RuntimeException('Book not found');
-//        }
-//
-//        return $book->price * $quantity;
-//    }
 
     private function calculateTotalCost(Cart $cart): string
     {
